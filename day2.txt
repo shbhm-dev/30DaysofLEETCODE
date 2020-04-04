@@ -1,0 +1,42 @@
+//Write an algorithm to determine if a number is "happy".
+
+A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.
+
+
+class Solution {
+public:
+    int dp[100000] = {0};
+    bool isHappy(int num) {
+        int sum = 0;
+        int i = 0;
+        while(i != 6)
+        {  i++;
+            while(num>0)
+        {  int rem = num%10;
+            sum += rem*rem;
+            num=num/10;
+        }
+            num = sum;
+ 
+       
+         
+                if(sum==1)
+                    return true;
+            
+                if(dp[sum] != 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    dp[sum]= 1;
+                }
+                   sum = 0;
+            
+        }
+       
+       
+        
+        return false;
+    }
+};

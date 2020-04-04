@@ -1,0 +1,19 @@
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& arr) {
+            int max_so_far = arr[0];
+            int maxSum = arr[0];
+        
+        for(int i=1;i<arr.size();i++)
+        {
+            max_so_far = max(arr[i],arr[i] + max_so_far);
+            maxSum = max(maxSum,max_so_far);
+            
+        }
+        
+        return maxSum;
+        
+    }
+};
