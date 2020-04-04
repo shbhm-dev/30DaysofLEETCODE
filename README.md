@@ -1,4 +1,4 @@
-# 30DaysofcodeLEETCODE
+# 30 Days of code LEET CODE
 DAY 1 : Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
 DAY 2 : Write an algorithm to determine if a number is "happy".
