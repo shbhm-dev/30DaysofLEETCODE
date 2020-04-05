@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& arr) {
+        
+        int n = arr.size();
+        vector<int> v;
+         int profit = 0;
+        for(int i=0;i<n-1;i++)
+	    {
+	        if(arr[i]>arr[i+1] )
+	        {
+	            continue;
+	        }
+	        else {
+	            int x = arr[i];
+	            while(i<n-1 && arr[i]<arr[i+1])
+	            {
+	                i++;
+	            }
+	            int y = arr[i];
+	           profit += (y-x);
+	        }
+	    }
+	return profit;
+    }
+};
