@@ -1,31 +1,24 @@
 class Solution {
 public:
-        
-   
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
- 
-        map<string,vector<int>> mp;
-        vector<string> vec = strs;
-        vector<vector<string>> res(strs.size());
-     for(int i=0;i<strs.size();i++)
-      {         
-          sort(strs[i].begin(),strs[i].end());
-            mp[strs[i]].push_back(i);
-      }
-      int k = 0;
-    for(auto x : mp)
-    {
+        vector<vector<string>> y;
         
-        for(auto i : x.second)
+        if(strs.size() == 0) return y;
+        
+        map<string,vector<string>> dict;
+        for(string s: strs)
         {
-            res[k].push_back(vec[i]);
-
+            string sorted = s;
+            sort(sorted.begin(),sorted.end());
+            dict[sorted].push_back(s);
         }
-        k++;
-        cout<<endl;
-    }
-     
-        res.resize(k);
-        return res;
+        map<string,vector<string>>::iterator o = dict.begin();
+        while(o != dict.end())
+        {
+            y.push_back(o->second);
+            o++;
+        }
+    
+        return y;
     }
 };
