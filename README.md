@@ -16,3 +16,14 @@ DAY 4 : Given an array nums, write a function to move all 0's to the end of it w
 DAY 5: Say you have an array for which the ith element is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
 
+DAY 6 : Given an array of strings, group anagrams together.
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+Output:
+[
+  ["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+
+
+
