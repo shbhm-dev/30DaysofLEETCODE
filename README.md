@@ -35,5 +35,6 @@ Input: arr = [1,2,3]
 Output: 2
 Explanation: 1 and 2 are counted cause 2 and 3 are in arr.
 
-
+DAY 8 : Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
 
