@@ -38,3 +38,7 @@ Explanation: 1 and 2 are counted cause 2 and 3 are in arr.
 DAY 8 : Given a non-empty, singly linked list with head node head, return a middle node of linked list.
 If there are two middle nodes, return the second middle node.
 
+DAY 9 : Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.
+Input: S = "ab#c", T = "ad#c"
+Output: true
+Explanation: Both S and T become "ac".
