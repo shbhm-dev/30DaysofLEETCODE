@@ -60,3 +60,5 @@ Each turn, we choose the two heaviest stones and smash them together.  Suppose t
 If x == y, both stones are totally destroyed;
 If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.
 At the end, there is at most 1 stone left.  Return the weight of this stone (or 0 if there are no stones left.)
+
+DAY 13 : Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
