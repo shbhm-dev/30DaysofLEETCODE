@@ -1,0 +1,18 @@
+class Solution {
+public:
+    string stringShift(string s, vector<vector<int>>& shift) {
+             
+        for(int k =0;k<shift.size();k++)
+        {
+           if(shift[k][0]==0)
+           {              
+              rotate(s.begin(),s.begin()+shift[k][1],s.end());
+           }
+            else
+            {
+              rotate(s.begin(),s.begin()+s.size()-shift[k][1],s.end());   
+            }   
+        }
+        return s;
+    }
+};
