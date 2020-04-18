@@ -1,0 +1,40 @@
+class Solution {
+public:
+    void markNeigh(vector<vector<char>>& grid,int i,int j,int r,int c)
+    {
+        if(i < 0 || j< 0 || j>=c || i>=r|| grid[i][j] != '1')
+            return;
+        
+        grid[i][j] = '2';
+        
+        markNeigh(grid,i+1,j,r,c);
+         markNeigh(grid,i-1,j,r,c);
+        markNeigh(grid,i,j+1,r,c);
+        markNeigh(grid,i,j-1,r,c);
+ 
+    }
+    int numIslands(vector<vector<char>>& grid) {
+        int c = 0;
+     
+        int rows = grid.size();
+         if(rows==0)    
+            return 0;
+           int cols = grid[0].size();
+        for(int i = 0;i<rows;i++)
+        {
+            
+            for(int j = 0;j<cols;j++)
+            {
+                
+                if(grid[i][j]== '1')
+                {
+                    
+                    c++;
+                    //make all the neighbouring land as marked
+                    markNeigh(grid,i,j,rows,cols);
+                }
+            }            
+        }
+        return c;
+    }
+};
