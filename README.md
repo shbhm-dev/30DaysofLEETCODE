@@ -116,3 +116,4 @@ Submissions making more than 1000 calls to BinaryMatrix.get will be judged Wrong
 For custom testing purposes you're given the binary matrix mat as input in the following four examples. You will not have access the binary matrix directly.
 
 
+DAY 22 : Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
