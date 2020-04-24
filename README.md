@@ -117,3 +117,7 @@ For custom testing purposes you're given the binary matrix mat as input in the f
 
 
 DAY 22 : Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+
+DAY 23 : Bitwise AND of Numbers Range
+Solution
+Given a range [m, n] where 0 <= m <= n <= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
