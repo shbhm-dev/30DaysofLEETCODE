@@ -1,0 +1,14 @@
+class Solution {
+public:
+int andOperator(int a, int b){ 
+while(a < b)
+{ 
+    b -= (b & -b); 
+} 
+return b; 
+} 
+    int rangeBitwiseAnd(int m, int n) 
+    {
+        return andOperator(m,n);
+    }
+};
