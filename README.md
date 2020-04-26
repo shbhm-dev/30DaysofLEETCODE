@@ -136,3 +136,7 @@ Each element in the array represents your maximum jump length at that position.
 Determine if you are able to reach the last index.
 
 
+DAY 26 : Given two strings text1 and text2, return the length of their longest common subsequence.
+
+A subsequence of a string is a new string generated from the original string with some characters(can be none) deleted without changing the relative order of the remaining characters. (eg, "ace" is a subsequence of "abcde" while "aec" is not). A common subsequence of two strings is a subsequence that is common to both strings.
+If there is no common subsequence, return 0.
