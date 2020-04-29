@@ -140,3 +140,13 @@ DAY 26 : Given two strings text1 and text2, return the length of their longest c
 
 A subsequence of a string is a new string generated from the original string with some characters(can be none) deleted without changing the relative order of the remaining characters. (eg, "ace" is a subsequence of "abcde" while "aec" is not). A common subsequence of two strings is a subsequence that is common to both strings.
 If there is no common subsequence, return 0.
+
+DAY 27 : Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+
+DAY 28 : You have a queue of integers, you need to retrieve the first unique integer in the queue.
+
+Implement the FirstUnique class:
+
+FirstUnique(int[] nums) Initializes the object with the numbers in the queue.
+int showFirstUnique() returns the value of the first unique integer of the queue, and returns -1 if there is no such integer.
+void add(int value) insert value to the queue.
