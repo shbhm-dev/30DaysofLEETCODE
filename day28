@@ -1,0 +1,38 @@
+class FirstUnique {
+public:
+    unordered_map<int,long long int> m;
+    deque<int> dq;
+    FirstUnique(vector<int>& nums) {
+        
+        for(int i = 0;i<nums.size();i++)
+        {   dq.push_back(nums[i]);
+            m[nums[i]]++;
+        }
+       
+    }
+    
+    int showFirstUnique() {
+        
+         while(m[dq.front()] > 1)
+        {
+            dq.pop_front();
+        }
+      if(!dq.empty())
+          return dq.front();
+        
+        return -1;
+    }
+    
+    void add(int value) {
+     m[value]++;
+ 
+      dq.push_back(value);
+    }
+};
+
+/**
+ * Your FirstUnique object will be instantiated and called as such:
+ * FirstUnique* obj = new FirstUnique(nums);
+ * int param_1 = obj->showFirstUnique();
+ * obj->add(value);
+ */
