@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int maximalSquare(vector<vector<char>>& matrix) {
+        if(matrix.empty())
+            return 0;
+        
+    int row = matrix.size();
+    int col = matrix[0].size();    
+        int dp[row+1][col+1];
+        memset(dp,0,sizeof dp);
+        int max_len = 0;
+        
+        for(int i =1;i<=row;i++)
+        {
+            for(int j = 1;j<=col;j++)
+            {
+                if(matrix[i-1][j-1]=='1')
+                {
+                    dp[i][j] = min(min(dp[i][j-1],dp[i-1][j]),dp[i-1][j-1]) + 1;
+                    max_len = max(max_len,dp[i][j]);
+                }
+            }
+        }
+        return max_len*max_len;
+    }
+};
