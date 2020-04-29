@@ -150,3 +150,7 @@ Implement the FirstUnique class:
 FirstUnique(int[] nums) Initializes the object with the numbers in the queue.
 int showFirstUnique() returns the value of the first unique integer of the queue, and returns -1 if there is no such integer.
 void add(int value) insert value to the queue.
+
+DAY 29 : Given a non-empty binary tree, find the maximum path sum.
+
+For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
