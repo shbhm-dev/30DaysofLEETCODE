@@ -1,5 +1,5 @@
 # 30 Days of code LEET CODE
-# All are accepted solutions ,Better solution with less space or time complexity are welcomed.
+# All are accepted solutions ,Please share if you have better solution with less space or time complexity.
 DAY 1 : Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
 DAY 2 : Write an algorithm to determine if a number is "happy".
