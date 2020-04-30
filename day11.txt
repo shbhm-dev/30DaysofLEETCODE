@@ -9,30 +9,37 @@
  */
 class Solution {
 public:
-    int height(TreeNode* root)
-    {   if(root==NULL)
-        return -1;
+   class pair {
+       public : 
+       int diam;
+       int height;
+   };
+    
+    pair diam(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            return {0,0};
+        }
         
-        int l = height(root->left);
-        int r = height(root->right);
+        pair p1 = diam(root->left);
+        pair p2 = diam(root->right);
         
-        return 1+max(l,r);
+   
+        int maxDaim = max(p1.height+p2.height,max(p1.diam,p2.diam));
+        
+        return {
+            maxDaim,
+            max(p1.height,p2.height)+1
+        };
+        
         
     }
     
+    
     int diameterOfBinaryTree(TreeNode* root) {
         
-        if(root == NULL)
-            return 0;
-
-        
-        int lh = height(root->left);
-        int rh = height(root->right);
-        int rd = diameterOfBinaryTree(root->right);
-        int ld = diameterOfBinaryTree(root->left);
-        
-        return max((2+lh+rh),max(rd,ld)) ;
-        
+       return diam(root).diam;
         
     }
 };
